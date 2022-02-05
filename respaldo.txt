@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/estilos-dist.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./material/images/favicon.png">
+  <title>Practica 6 Frontend Mentor</title>
+</head>
+<body>
+
+ <div class="bg__img"></div> <!-- Image-background -->
+
+ <div class="main__container">
+   <div class="card__container">
+
+     <div class="hero__img">
+       <img src="./material/images/illustration-hero.svg" class="img__hero">
+     </div>
+
+    <div class="card__container--flex">
+
+     <div class="hero__texts">
+       <h1 class="hero__texts--title">Order Summary</h1>
+       <p class="hero__texts--paragraph">
+         You can now listen to millions of songs, audiobooks, annd podcasts
+          on any device anywhere you like!
+       </p>
+     </div>
+
+     <div class="hero__plan">
+
+       <div class="hero__plan--left">
+         <img src="./material/images/icon-music.svg" class="img__song">
+        <div class="hero__plant--texts">
+          <h4 class="plan__left--title">Annual Plan</h4>
+          <p class="plan__left--paragraph">$59.99/year</p>
+        </div>
+       </div>
+         <a href="#" class="hero__plan--change">Change</a>
+
+     </div>
+
+      <a href="" class="button hero__button--one">Proceed to Payment</a>
+      <a href="" class="button hero__button--two">Cancel Order</a>
+
+    </div><!-- Container Flex-->
+  </div><!-- Card Container-->
+ </div>
+
+
+  <footer class="attribution">
+    <p class="p__attribution">Challenge by <a href="https://www.frontendmentor.io?" target="_blank"
+    class="attribution__a"> Frontend Mentor</a>.</p>
+    <p class="p__attribution">Code by <a href="https://beacons.page/pitagorastrike" target="_blank"
+    class="attribution__a"> Victor Sanchez</a>.</p>
+  </footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+/* MATERIAL:
+
+    Responsive:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+    Colores:
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+    Fuentes:
+
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900
+
+- Font size (paragraph): 16px
+
+- Family: [Red Hat Display]
+- Weights: 500, 700, 900
+
+ */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --bg-blue: hsl(225, 100%, 94%);
+  --blue: hsl(245, 75%, 52%);
+  --bg-card: hsl(225, 100%, 98%);
+  --blue-med: hsl(224, 23%, 55%);
+  --dark-blue:hsl(223, 47%, 23%);
+}
+
+/* --------------------------------ALL BODY-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url("../material/images/pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--bg-blue);
+  position: relative;
+  overflow: hidden;
+}
+/* .bg__img{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+
+/* Mobile First (< 375px) */
+/* ---------------------------------CONTAINER---------------------------------*/
+.main__container{
+  margin: 0 10px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__container{
+  max-width: 450px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/*-----------------------------------HERO-------------------------------------*/
+.hero__img{
+  height: 220px;
+  background-size: contain;
+}
+
+.img__hero{
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__container--flex{
+  width: 100%;
+  height: 57vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__texts{
+  margin: 0 10%;
+  line-height: 25px;
+}
+
+.hero__texts--title{
+  margin: 53px auto 25px;
+}
+
+.hero__texts--paragraph{
+
+}
+
+.hero__plan{
+  padding: 10px;
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225, 60%, 97%);
+  border-radius: 12px;
+}
+
+.hero__plan--left{
+  display: flex;
+  flex-direction: row;
+}
+
+.img__song{
+  margin-left: 10px;
+}
+
+.plan__left--title,
+.plan__left--paragraph{
+  margin-left: 20px;
+}
+
+.hero__plan--change{
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+/*----------------------------------BUTTONS---------------------------------- */
+
+.button{
+  text-decoration: none;
+}
+
+.hero__button--one{
+  width: 80%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--blue);
+  border-radius: 10px;
+}
+
+.hero__button--two{
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+
+/*-----------------------------RESPONSIVE----------------------------*/
+
+@media (max-width: 375px) {
+  .card__container{
+    height: 570px;
+  }
+
+  .hero__img,
+  .img__hero{
+    width: 100%;
+    height: 160px;
+
+  }
+
+  .hero__texts{
+
+  }
+
+  .hero__texts--title{
+    margin-top: 38px;
+    font-size: 1.5rem;
+  }
+
+  .hero__plan{
+    margin-top: 10px;
+    width: 280px;
+    height: 80px;
+  }
+
+  .hero__button--two{
+    margin-bottom: 100px;
+  }
+
+}
+
+
+
+
+
+
+/*-----------------------------All Rights Reserved----------------------------*/
+.attribution{
+  bottom: 50px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--White);
+}
+
+.p__attribution{
+  display: inline;
+}
+
+.attribution_a{
+  text-decoration: none;
+}
